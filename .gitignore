@@ -8,9 +8,11 @@ __pycache__/
 
 # Raw datasets and packet captures
 data/raw/
-captures/
+captures/*
 *.pcap
 *.pcapng
+!captures/
+!captures/iot_mqtt.pcapng
 
 # Temporary files
 .DS_Store
