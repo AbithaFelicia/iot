@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.env.*
+*.log
+
+# Raw datasets and packet captures
+data/raw/
+captures/
+*.pcap
+*.pcapng
+
+# Temporary files
+.DS_Store
+
+# Exclude large CSV datasets and intermediate results
+data/raw/
+data/processed/**/*.csv
+data/supervised/**/*.csv
+
+# Keep trained models and JSON metrics
+!data/processed/splits/*.joblib
+!data/supervised/**/*.joblib
+!data/supervised/**/*.json
+
+# Local backup files
+*.backup
+*.py.backup
+*_backup.py
+*_before_*.py
+
+# Empty supplementary archives
+supplementary/*.zip
