@@ -384,11 +384,11 @@ st.write("✔ CICIoT2023 supervised models trained")
 st.write("✔ Hybrid DT–LR evaluation saved")
 st.write("✔ MQTT sensor publisher and listener implemented")
 st.write("✔ Digital Twin sensor monitoring implemented")
-st.write("✔ Offline network packet capture available")
+st.write("✔ Offline network packet capture and inference available")
 
 st.warning(
-    "Live MQTT network traffic has not yet been validated "
-    "against the trained 34-feature IDS model. Offline model "
+    "Live MQTT sensor monitoring is operational, but network traffic "
+    "has not yet been validated against the trained 34-feature IDS model. Offline model "
     "metrics and live sensor alerts are shown separately."
 )
 
