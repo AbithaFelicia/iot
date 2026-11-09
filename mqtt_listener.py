@@ -5,8 +5,10 @@ import paho.mqtt.client as mqtt
 latest_reading = {}
 lock = threading.Lock()
 
-BROKER = "localhost"
-PORT = 1883
+import os
+
+BROKER = os.getenv("MQTT_BROKER", "localhost")
+PORT = int(os.getenv("MQTT_PORT", "1883"))
 TOPIC = "lab/iot/sensor"
 
 
@@ -37,10 +39,12 @@ client.on_message = on_message
 
 
 def start_listener():
+    if os.getenv("MQTT_ENABLED", "true").lower() != "false":
+        return
+
     if not client.is_connected():
         client.connect(BROKER, PORT, 60)
         client.loop_start()
-
 
 def get_latest_reading():
     with lock:
