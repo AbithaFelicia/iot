@@ -25,6 +25,7 @@ data/supervised/**/*.csv
 !data/supervised/file_based_mitm60k/category_comparison.csv
 !data/supervised/file_based_mitm60k/results/hybrid_dt_lr_mitm60k_no_https_predictions.csv
 !data/processed/splits/baseline_stats_transformed.csv
+!data/processed/splits/benign_validation.csv
 # Keep trained models and JSON metrics
 !data/processed/splits/*.joblib
 !data/supervised/**/*.joblib
