@@ -20,6 +20,11 @@ data/raw/
 data/processed/**/*.csv
 data/supervised/**/*.csv
 
+# Include dashboard result files
+!data/processed/splits/attack_detection_results.csv
+!data/supervised/file_based_mitm60k/category_comparison.csv
+!data/supervised/file_based_mitm60k/results/hybrid_dt_lr_mitm60k_no_https_predictions.csv
+
 # Keep trained models and JSON metrics
 !data/processed/splits/*.joblib
 !data/supervised/**/*.joblib
